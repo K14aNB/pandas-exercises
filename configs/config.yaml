@@ -1,0 +1,16 @@
+environment:
+  os: 'linux'
+  runtime: 'colab'
+
+data:
+  Chipotle:
+    source: 'direct-download'
+    data_src_path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv'
+
+outputs:
+  Chipotle:
+    nb-html-preview: 'true'
+    py-percent-script: 'true'
+    output-path: 'pandas-exercises/Getting to know the data/Chipotle'
+  
+
