@@ -14580,7 +14580,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Getting-To-Know-Your-Data---Chipotle"><strong>Getting To Know Your Data - Chipotle</strong><a class="anchor-link" href="#Getting-To-Know-Your-Data---Chipotle">&#182;</a></h1>
+<h1 id="Getting-to-know-the-Data---Chipotle"><strong>Getting to know the Data - Chipotle</strong><a class="anchor-link" href="#Getting-to-know-the-Data---Chipotle">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -14670,7 +14670,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-python"><pre><span></span><span class="n">chipo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'/content/data/chipotle.tsv'</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\t</span><span class="s1">'</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="k">if</span> <span class="s1">'google.colab'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">:</span>
+    <span class="nb">dir</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s1">'Data Science'</span><span class="p">,</span><span class="s1">'Git Repos'</span><span class="p">,</span><span class="s1">'pandas-exercises'</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">dir</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+<span class="n">chipo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">dir</span><span class="p">,</span><span class="s1">'data'</span><span class="p">,</span><span class="s1">'chipotle.tsv'</span><span class="p">),</span><span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\t</span><span class="s1">'</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14710,7 +14714,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-  <div id="df-ad007668-2526-4ebd-b9a9-c4cb466a6b4c" class="colab-df-container">
+  <div id="df-0f0ac7ef-2389-4891-8310-ddf4d4be483b" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -14823,7 +14827,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-ad007668-2526-4ebd-b9a9-c4cb466a6b4c')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-0f0ac7ef-2389-4891-8310-ddf4d4be483b')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -14875,12 +14879,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
     <script>
       const buttonEl =
-        document.querySelector('#df-ad007668-2526-4ebd-b9a9-c4cb466a6b4c button.colab-df-convert');
+        document.querySelector('#df-0f0ac7ef-2389-4891-8310-ddf4d4be483b button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-ad007668-2526-4ebd-b9a9-c4cb466a6b4c');
+        const element = document.querySelector('#df-0f0ac7ef-2389-4891-8310-ddf4d4be483b');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -14900,8 +14904,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
   </div>
 
 
-<div id="df-a9c0b6f8-5d31-43ae-a9ca-559be363c78a">
-  <button class="colab-df-quickchart" onclick="quickchart('df-a9c0b6f8-5d31-43ae-a9ca-559be363c78a')"
+<div id="df-aaae886d-14cb-4ad1-bfcc-83da55b0429c">
+  <button class="colab-df-quickchart" onclick="quickchart('df-aaae886d-14cb-4ad1-bfcc-83da55b0429c')"
             title="Suggest charts"
             style="display:none;">
 
@@ -15020,7 +15024,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-a9c0b6f8-5d31-43ae-a9ca-559be363c78a button');
+        document.querySelector('#df-aaae886d-14cb-4ad1-bfcc-83da55b0429c button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();

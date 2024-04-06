@@ -13,7 +13,7 @@
 # ---
 
 # %% [markdown]
-# # **Getting To Know Your Data - Chipotle**
+# # **Getting to know the Data - Chipotle**
 
 # %% [markdown]
 # **Import the libraries**
@@ -41,7 +41,11 @@ if setup_env_response.status==200:
 # **Read the data**
 
 # %%
-chipo = pd.read_csv('/content/data/chipotle.tsv',sep='\t')
+if 'google.colab' not in sys.modules:
+    dir=os.path.join(os.getcwd(),'Data Science','Git Repos','pandas-exercises')
+else:
+    dir=os.getcwd()
+chipo = pd.read_csv(os.path.join(dir,'data','chipotle.tsv'),sep='\t')
 
 # %%
 chipo.head(10)
