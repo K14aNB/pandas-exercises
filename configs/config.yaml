@@ -6,11 +6,18 @@ data:
   Chipotle:
     source: 'direct-download'
     data_src_path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv'
+  Occupation:
+    source: 'direct-download'
+    data_src_path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/u.user'
 
 outputs:
   Chipotle:
     nb-html-preview: 'true'
     py-percent-script: 'true'
     output-path: 'pandas-exercises/Getting to know the data/Chipotle'
+  Occupation:
+    nb-html-preview: 'true'
+    py-percent-script: 'true'
+    output-path: 'pandas-exercises/Getting to know the data/Occupation'
   
 
