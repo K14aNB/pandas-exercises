@@ -1,14 +1,14 @@
-environment:
-  os: 'linux'
-  runtime: 'colab'
-
 data:
   Chipotle:
     source: 'direct-download'
-    data_src_path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv'
+    data-src-path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv'
   Occupation:
     source: 'direct-download'
-    data_src_path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/u.user'
+    data-src-path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/u.user'
+  World-Food-Facts:
+    source: 'kaggle-datasets'
+    data-src-path: 'openfoodfacts/world-food-facts'
+    
 
 outputs:
   Chipotle:
@@ -19,5 +19,10 @@ outputs:
     nb-html-preview: 'true'
     py-percent-script: 'true'
     output-path: 'pandas-exercises/Getting to know the data/Occupation'
+  World-Food-Facts:
+    nb-html-preview: 'true'
+    py-percent-script: 'true'
+    output-path: 'pandas-exercises/Getting to know the data/World Food Facts'
+
   
 
