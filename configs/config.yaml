@@ -1,28 +1,39 @@
 data:
-  Chipotle:
+  Getting-to-know-the-data-Chipotle:
     source: 'direct-download'
     data-src-path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv'
-  Occupation:
+  Getting-to-know-the-data-Occupation:
     source: 'direct-download'
     data-src-path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/u.user'
-  World-Food-Facts:
+  Getting-to-know-the-data-World-Food-Facts:
     source: 'kaggle-datasets'
     data-src-path: 'openfoodfacts/world-food-facts'
+  Filtering-and-Sorting-Chipotle:
+    source: 'direct-download'
+    data-src-path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv'
+    
     
 
 outputs:
-  Chipotle:
+  Getting-to-know-the-data-Chipotle:
     nb-html-preview: 'true'
     py-percent-script: 'true'
     output-path: 'pandas-exercises/Getting to know the data/Chipotle'
-  Occupation:
+  Getting-to-know-the-data-Occupation:
     nb-html-preview: 'true'
     py-percent-script: 'true'
     output-path: 'pandas-exercises/Getting to know the data/Occupation'
-  World-Food-Facts:
+  Getting-to-know-the-data-World-Food-Facts:
     nb-html-preview: 'true'
     py-percent-script: 'true'
     output-path: 'pandas-exercises/Getting to know the data/World Food Facts'
+  Filtering-and-Sorting-Chipotle:
+    nb-html-preview: 'true'
+    py-percent-script: 'true'
+    output-path: 'pandas-exercises/Filtering and Sorting/Chipotle'
+    
+
+
 
   
 
