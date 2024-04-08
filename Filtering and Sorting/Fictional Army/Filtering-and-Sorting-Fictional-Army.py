@@ -67,7 +67,7 @@ army.info()
 # **Set `origin` column as index**
 
 # %%
-army.index=army['origin']
+army=army.set_index('origin')
 army
 
 # %% [markdown]
