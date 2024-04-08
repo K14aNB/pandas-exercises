@@ -11,6 +11,9 @@ data:
   Filtering-and-Sorting-Chipotle:
     source: 'direct-download'
     data-src-path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv'
+  Filtering-and-Sorting-Euro12:
+    source: 'direct-download'
+    data-src-path: 'https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/02_Filtering_%26_Sorting/Euro12/Euro_2012_stats_TEAM.csv'
     
     
 
@@ -31,6 +34,10 @@ outputs:
     nb-html-preview: 'true'
     py-percent-script: 'true'
     output-path: 'pandas-exercises/Filtering and Sorting/Chipotle'
+  Filtering-and-Sorting-Euro12:
+    nb-html-preview: 'true'
+    py-percent-script: 'true'
+    output-path: 'pandas-exercises/Filtering and Sorting/Euro12'
     
 
 
