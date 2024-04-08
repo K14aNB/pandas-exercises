@@ -11,3 +11,5 @@
      Notebook preview - https://k14anb.github.io/pandas-exercises/Filtering%20and%20Sorting/Chipotle/Filtering-and-Sorting-Chipotle.html
    * ### Euro12
      Notebook preview - https://k14anb.github.io/pandas-exercises/Filtering%20and%20Sorting/Euro12/Filtering-and-Sorting-Euro12.html
+   * ### Fictional Army
+     Notebook preview - https://k14anb.github.io/pandas-exercises/Filtering%20and%20Sorting/Fictional%20Army/Filtering-and-Sorting-Fictional-Army.html
