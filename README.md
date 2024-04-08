@@ -13,3 +13,6 @@
      Notebook preview - https://k14anb.github.io/pandas-exercises/Filtering%20and%20Sorting/Euro12/Filtering-and-Sorting-Euro12.html
    * ### Fictional Army
      Notebook preview - https://k14anb.github.io/pandas-exercises/Filtering%20and%20Sorting/Fictional%20Army/Filtering-and-Sorting-Fictional-Army.html
+## 3. Grouping  
+   * ### Alcohol Consumption  
+     Notebook preview - https://k14anb.github.io/pandas-exercises/Grouping/Alcohol%20Consumption/Grouping-Alcohol-Consumption.html
