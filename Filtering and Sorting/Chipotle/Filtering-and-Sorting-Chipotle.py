@@ -62,7 +62,12 @@ chipo['item_price'] = chipo['item_price'].map(lambda x:x.split('$')[1])
 chipo['item_price'] = chipo['item_price'].astype('float64')
 
 # %%
+# Total Number of items that cost more than 10.00
 chipo.loc[chipo['item_price']>10.00,'item_name'].count()
+
+# %%
+# Number of unique products that cost more than 10.00
+chipo.loc[chipo['item_price']>10.00,'item_name'].nunique()
 
 # %% [markdown]
 # **What is the price of each item?**
