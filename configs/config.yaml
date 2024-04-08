@@ -17,6 +17,9 @@ data:
   Filtering-and-Sorting-Fictional-Army:
     source: 'no-download'
     data-src-path: ''
+  Grouping-Alcohol-Consumption:
+    source: 'direct-download'
+    data-src-path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/drinks.csv'
     
     
 
@@ -45,6 +48,10 @@ outputs:
     nb-html-preview: 'true'
     py-percent-script: 'true'
     output-path: 'pandas-exercises/Filtering and Sorting/Fictional Army'
+  Grouping-Alcohol-Consumption:
+    nb-html-preview: 'true'
+    py-percent-script: 'true'
+    output-path: 'pandas-exercises/Grouping/Alcohol Consumption'
     
 
 
