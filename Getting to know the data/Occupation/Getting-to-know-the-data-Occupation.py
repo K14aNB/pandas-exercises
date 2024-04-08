@@ -96,7 +96,7 @@ users.index
 users.dtypes
 
 # %% [markdown]
-# **Print only the occupation column**
+# **Print only the `occupation` column**
 
 # %%
 users['occupation']
@@ -126,7 +126,7 @@ users.describe().T
 users.describe(include='O').T
 
 # %% [markdown]
-# **Summarize only occupation column**
+# **Summarize only `occupation` column**
 
 # %%
 users['occupation'].describe(include='O')

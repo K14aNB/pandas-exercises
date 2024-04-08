@@ -86,7 +86,7 @@ chipo['item_name'].value_counts().index[0]
 chipo.loc[chipo['item_name']==chipo['item_name'].value_counts().index[0],'quantity'].sum()
 
 # %% [markdown]
-# **Most Ordered Item in choice_description column**
+# **Most Ordered Item in `choice_description` column**
 
 # %%
 # Most ordered item in the choice_description column
@@ -100,7 +100,7 @@ chipo['choice_description'].value_counts().index[0]
 chipo['quantity'].sum()
 
 # %% [markdown]
-# **Change dtype of price to float**
+# **Change dtype of `item_price` to float**
 
 # %%
 chipo['item_price'].dtypes
