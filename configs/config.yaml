@@ -23,6 +23,9 @@ data:
   Grouping-Occupation:
     source: 'direct-download'
     data-src-path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/u.user'
+  Grouping-Regiment:
+    source: 'no-download'
+    data-src-path: ''
     
     
 
@@ -59,6 +62,10 @@ outputs:
     nb-html-preview: 'true'
     py-percent-script: 'true'
     output-path: 'pandas-exercises/Grouping/Occupation'
+  Grouping-Regiment:
+    nb-html-preview: 'true'
+    py-percent-script: 'true'
+    output-path: 'pandas-exercises/Grouping/Regiment'
     
 
 
