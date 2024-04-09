@@ -29,6 +29,9 @@ data:
   Apply-Alcohol-Consumption:
     source: 'direct-download'
     data-src-path: 'https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/04_Apply/Students_Alcohol_Consumption/student-mat.csv'
+  Apply-US-Crime-Rates:
+    source: 'direct-download'
+    data-src-path: 'https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/04_Apply/US_Crime_Rates/US_Crime_Rates_1960_2014.csv'
 
     
     
@@ -74,6 +77,10 @@ outputs:
     nb-html-preview: 'true'
     py-percent-script: 'true'
     output-path: 'pandas-exercises/Apply/Alcohol Consumption'
+  Apply-US-Crime-Rates:
+    nb-html-preview: 'true'
+    py-percent-script: 'true'
+    output-path: 'pandas-exercises/Apply/US Crime Rates'
     
 
 
