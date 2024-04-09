@@ -20,3 +20,6 @@
      Notebook preview - https://k14anb.github.io/pandas-exercises/Grouping/Occupation/Grouping-Occupation.html
    * ### Regiment
      Notebook preview - https://k14anb.github.io/pandas-exercises/Grouping/Regiment/Grouping-Regiment.html
+## 4. Apply  
+   * ### Alcohol Consumption
+     Notebook preview - https://k14anb.github.io/pandas-exercises/Apply/Alcohol%20Consumption/Apply-Alcohol-Consumption.html
