@@ -26,6 +26,10 @@ data:
   Grouping-Regiment:
     source: 'no-download'
     data-src-path: ''
+  Apply-Alcohol-Consumption:
+    source: 'direct-download'
+    data-src-path: 'https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/04_Apply/Students_Alcohol_Consumption/student-mat.csv'
+
     
     
 
@@ -66,6 +70,10 @@ outputs:
     nb-html-preview: 'true'
     py-percent-script: 'true'
     output-path: 'pandas-exercises/Grouping/Regiment'
+  Apply-Alcohol-Consumption:
+    nb-html-preview: 'true'
+    py-percent-script: 'true'
+    output-path: 'pandas-exercises/Apply/Alcohol Consumption'
     
 
 
