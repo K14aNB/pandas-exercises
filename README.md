@@ -18,3 +18,5 @@
      Notebook preview - https://k14anb.github.io/pandas-exercises/Grouping/Alcohol%20Consumption/Grouping-Alcohol-Consumption.html
    * ### Occupation
      Notebook preview - https://k14anb.github.io/pandas-exercises/Grouping/Occupation/Grouping-Occupation.html
+   * ### Regiment
+     Notebook preview - https://k14anb.github.io/pandas-exercises/Grouping/Regiment/Grouping-Regiment.html
