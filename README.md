@@ -23,3 +23,5 @@
 ## 4. Apply  
    * ### Alcohol Consumption
      Notebook preview - https://k14anb.github.io/pandas-exercises/Apply/Alcohol%20Consumption/Apply-Alcohol-Consumption.html
+   * ### US Crime Rates
+     Notebook preview - https://k14anb.github.io/pandas-exercises/Apply/US%20Crime%20Rates/Apply-US-Crime-Rates.html
