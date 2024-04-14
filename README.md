@@ -25,3 +25,6 @@
      Notebook preview - https://k14anb.github.io/pandas-exercises/Apply/Alcohol%20Consumption/Apply-Alcohol-Consumption.html
    * ### US Crime Rates
      Notebook preview - https://k14anb.github.io/pandas-exercises/Apply/US%20Crime%20Rates/Apply-US-Crime-Rates.html
+## 5. Stats  
+   * ### US Baby Names
+     Notebook preview - https://k14anb.github.io/pandas-exercises/Stats/US%20Baby%20Names/Stats-US-Baby-Names
