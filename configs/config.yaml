@@ -32,6 +32,15 @@ data:
   Apply-US-Crime-Rates:
     source: 'direct-download'
     data-src-path: 'https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/04_Apply/US_Crime_Rates/US_Crime_Rates_1960_2014.csv'
+  Merge-Fictitious-Names:
+    source: 'no-download'
+    data-src-path: ''
+  Merge-Housing-Market:
+    source: 'no-download'
+    data-src-path: ''
+  Stats-US-Baby-Names:
+    source: 'direct-download'
+    data-src-path: 'https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/06_Stats/US_Baby_Names/US_Baby_Names_right.csv'
 
     
     
@@ -40,47 +49,59 @@ outputs:
   Getting-to-know-the-data-Chipotle:
     nb-html-preview: 'true'
     py-percent-script: 'true'
-    output-path: 'pandas-exercises/Getting to know the data/Chipotle'
+    output-path: 'Getting to know the data/Chipotle'
   Getting-to-know-the-data-Occupation:
     nb-html-preview: 'true'
     py-percent-script: 'true'
-    output-path: 'pandas-exercises/Getting to know the data/Occupation'
+    output-path: 'Getting to know the data/Occupation'
   Getting-to-know-the-data-World-Food-Facts:
     nb-html-preview: 'true'
     py-percent-script: 'true'
-    output-path: 'pandas-exercises/Getting to know the data/World Food Facts'
+    output-path: 'Getting to know the data/World Food Facts'
   Filtering-and-Sorting-Chipotle:
     nb-html-preview: 'true'
     py-percent-script: 'true'
-    output-path: 'pandas-exercises/Filtering and Sorting/Chipotle'
+    output-path: 'Filtering and Sorting/Chipotle'
   Filtering-and-Sorting-Euro12:
     nb-html-preview: 'true'
     py-percent-script: 'true'
-    output-path: 'pandas-exercises/Filtering and Sorting/Euro12'
+    output-path: 'Filtering and Sorting/Euro12'
   Filtering-and-Sorting-Fictional-Army:
     nb-html-preview: 'true'
     py-percent-script: 'true'
-    output-path: 'pandas-exercises/Filtering and Sorting/Fictional Army'
+    output-path: 'Filtering and Sorting/Fictional Army'
   Grouping-Alcohol-Consumption:
     nb-html-preview: 'true'
     py-percent-script: 'true'
-    output-path: 'pandas-exercises/Grouping/Alcohol Consumption'
+    output-path: 'Grouping/Alcohol Consumption'
   Grouping-Occupation:
     nb-html-preview: 'true'
     py-percent-script: 'true'
-    output-path: 'pandas-exercises/Grouping/Occupation'
+    output-path: 'Grouping/Occupation'
   Grouping-Regiment:
     nb-html-preview: 'true'
     py-percent-script: 'true'
-    output-path: 'pandas-exercises/Grouping/Regiment'
+    output-path: 'Grouping/Regiment'
   Apply-Alcohol-Consumption:
     nb-html-preview: 'true'
     py-percent-script: 'true'
-    output-path: 'pandas-exercises/Apply/Alcohol Consumption'
+    output-path: 'Apply/Alcohol Consumption'
   Apply-US-Crime-Rates:
     nb-html-preview: 'true'
     py-percent-script: 'true'
-    output-path: 'pandas-exercises/Apply/US Crime Rates'
+    output-path: 'Apply/US Crime Rates'
+  Merge-Fictitious-Names:
+    nb-html-preview: 'true'
+    py-percent-script: 'true'
+    output-path: 'Merge/Fictitious Names'
+  Merge-Housing-Market:
+    nb-html-preview: 'true'
+    py-percent-script: 'true'
+    output-path: 'Merge/Housing Market'
+  Stats-US-Baby-Names:
+    nb-html-preview: 'true'
+    py-percent-script: 'true'
+    output-path: 'Stats/US Baby Names'
     
 
 
