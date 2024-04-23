@@ -1,107 +1,131 @@
-data:
+notebooks:
   Getting-to-know-the-data-Chipotle:
-    source: 'direct-download'
-    data-src-path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv'
-  Getting-to-know-the-data-Occupation:
-    source: 'direct-download'
-    data-src-path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/u.user'
-  Getting-to-know-the-data-World-Food-Facts:
-    source: 'kaggle-datasets'
-    data-src-path: 'openfoodfacts/world-food-facts'
-  Filtering-and-Sorting-Chipotle:
-    source: 'direct-download'
-    data-src-path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv'
-  Filtering-and-Sorting-Euro12:
-    source: 'direct-download'
-    data-src-path: 'https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/02_Filtering_%26_Sorting/Euro12/Euro_2012_stats_TEAM.csv'
-  Filtering-and-Sorting-Fictional-Army:
-    source: 'no-download'
-    data-src-path: ''
-  Grouping-Alcohol-Consumption:
-    source: 'direct-download'
-    data-src-path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/drinks.csv'
-  Grouping-Occupation:
-    source: 'direct-download'
-    data-src-path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/u.user'
-  Grouping-Regiment:
-    source: 'no-download'
-    data-src-path: ''
-  Apply-Alcohol-Consumption:
-    source: 'direct-download'
-    data-src-path: 'https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/04_Apply/Students_Alcohol_Consumption/student-mat.csv'
-  Apply-US-Crime-Rates:
-    source: 'direct-download'
-    data-src-path: 'https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/04_Apply/US_Crime_Rates/US_Crime_Rates_1960_2014.csv'
-  Merge-Fictitious-Names:
-    source: 'no-download'
-    data-src-path: ''
-  Merge-Housing-Market:
-    source: 'no-download'
-    data-src-path: ''
-  Stats-US-Baby-Names:
-    source: 'direct-download'
-    data-src-path: 'https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/06_Stats/US_Baby_Names/US_Baby_Names_right.csv'
+    data:
+      - source: 'direct-download'
+      - data-src-path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv'
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Getting to know the data/Chipotle'
 
-    
-    
-
-outputs:
-  Getting-to-know-the-data-Chipotle:
-    nb-html-preview: 'true'
-    py-percent-script: 'true'
-    output-path: 'Getting to know the data/Chipotle'
   Getting-to-know-the-data-Occupation:
-    nb-html-preview: 'true'
-    py-percent-script: 'true'
-    output-path: 'Getting to know the data/Occupation'
+    data:
+      - source: 'direct-download'
+      - data-src-path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/u.user'
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Getting to know the data/Occupation'
+
   Getting-to-know-the-data-World-Food-Facts:
-    nb-html-preview: 'true'
-    py-percent-script: 'true'
-    output-path: 'Getting to know the data/World Food Facts'
+    data:
+      - source: 'kaggle-datasets'
+      - data-src-path: 'openfoodfacts/world-food-facts'
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Getting to know the data/World Food Facts'
+
   Filtering-and-Sorting-Chipotle:
-    nb-html-preview: 'true'
-    py-percent-script: 'true'
-    output-path: 'Filtering and Sorting/Chipotle'
+    data:
+      - source: 'direct-download'
+      - data-src-path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv'
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Filtering and Sorting/Chipotle'
+
   Filtering-and-Sorting-Euro12:
-    nb-html-preview: 'true'
-    py-percent-script: 'true'
-    output-path: 'Filtering and Sorting/Euro12'
+    data:
+      - source: 'direct-download'
+      - data-src-path: 'https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/02_Filtering_%26_Sorting/Euro12/Euro_2012_stats_TEAM.csv'
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Filtering and Sorting/Euro12'
+
   Filtering-and-Sorting-Fictional-Army:
-    nb-html-preview: 'true'
-    py-percent-script: 'true'
-    output-path: 'Filtering and Sorting/Fictional Army'
+    data:
+      - source: 'no-download'
+      - data-src-path: ''
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Filtering and Sorting/Fictional Army'
+
   Grouping-Alcohol-Consumption:
-    nb-html-preview: 'true'
-    py-percent-script: 'true'
-    output-path: 'Grouping/Alcohol Consumption'
+    data:
+      - source: 'direct-download'
+      - data-src-path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/drinks.csv'
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Grouping/Alcohol Consumption'
+
   Grouping-Occupation:
-    nb-html-preview: 'true'
-    py-percent-script: 'true'
-    output-path: 'Grouping/Occupation'
+    data:
+      - source: 'direct-download'
+      - data-src-path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/u.user'
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Grouping/Occupation'
+    
   Grouping-Regiment:
-    nb-html-preview: 'true'
-    py-percent-script: 'true'
-    output-path: 'Grouping/Regiment'
+    data:
+      - source: 'no-download'
+      - data-src-path: ''
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Grouping/Regiment'
+
   Apply-Alcohol-Consumption:
-    nb-html-preview: 'true'
-    py-percent-script: 'true'
-    output-path: 'Apply/Alcohol Consumption'
+    data:
+      - source: 'direct-download'
+      - data-src-path: 'https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/04_Apply/Students_Alcohol_Consumption/student-mat.csv'
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Apply/Alcohol Consumption'
+
   Apply-US-Crime-Rates:
-    nb-html-preview: 'true'
-    py-percent-script: 'true'
-    output-path: 'Apply/US Crime Rates'
+    data:
+      - source: 'direct-download'
+      - data-src-path: 'https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/04_Apply/US_Crime_Rates/US_Crime_Rates_1960_2014.csv'
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Apply/US Crime Rates'
+
   Merge-Fictitious-Names:
-    nb-html-preview: 'true'
-    py-percent-script: 'true'
-    output-path: 'Merge/Fictitious Names'
+    data:
+      - source: 'no-download'
+      - data-src-path: ''
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Merge/Fictitious Names'
+
   Merge-Housing-Market:
-    nb-html-preview: 'true'
-    py-percent-script: 'true'
-    output-path: 'Merge/Housing Market'
+    data:
+      - source: 'no-download'
+      - data-src-path: ''
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Merge/Housing Market'
+
   Stats-US-Baby-Names:
-    nb-html-preview: 'true'
-    py-percent-script: 'true'
-    output-path: 'Stats/US Baby Names'
+    data:
+      - source: 'direct-download'
+      - data-src-path: 'https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/06_Stats/US_Baby_Names/US_Baby_Names_right.csv'
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Stats/US Baby Names'
+
+
     
 
 
