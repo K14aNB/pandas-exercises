@@ -1,7 +1,9 @@
-download-kaggle-dataset @ git+https://github.com/K14aNB/download-kaggle-dataset@main
-env_setup @ git+https://github.com/K14aNB/setup-notebook-environment@main
+download-kaggle-dataset @ git+https://github.com/K14aNB/download-kaggle-dataset.git@main
+env_setup @ git+https://github.com/K14aNB/setup-notebook-environment.git@main
 numpy==1.26.4
 pandas==2.2.2
+matplotlib==3.8.0
+seaborn==0.13.1
 python-dateutil==2.9.0.post0
 pytz==2024.1
 PyYAML==6.0.1
