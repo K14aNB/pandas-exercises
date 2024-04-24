@@ -16,27 +16,32 @@
 # # **Merge - Housing Market**
 
 # %% [markdown]
+# **Check and install the dependencies**
+
+# %%
+# !curl -sSL "https://raw.githubusercontent.com/K14aNB/pandas-exercises/main/requirements.txt"
+
+# %%
+# Run this command in terminal before running this notebook as .py script
+# Installs dependencies from requirements.txt present in the repo
+# %%capture
+# !pip install -r "https://raw.githubusercontent.com/K14aNB/pandas-exercises/main/requirements.txt"
+
+# %% [markdown]
 # **Import the libraries**
 
 # %%
 import numpy as np
 import pandas as pd
-import sys
+import env_setup
 import os
-from urllib3 import PoolManager,request
 
 # %% [markdown]
 # **Environment Setup**
 
 # %%
-# Setup Environment
-# Github gist url for Python Script which will perform environment setup
-env_url='https://gist.githubusercontent.com/K14aNB/46becb626d36ad8fa8d445616241dfef/raw/'
-http=PoolManager()
-response=http.request('GET',env_url)
-if response.status==200:
-    exec(response.data.decode('utf-8'))
-    setup(repo_path='pandas-exercises',nb_name='Merge-Housing-Market')
+# Setup Environment(Downloading data and setting output formats specified in config.yaml)
+result_path=env_setup.setup(repo_name='pandas-exercises',nb_name='Merge-Housing-Market')
 
 # %% [markdown]
 # **Read the data**
@@ -45,3 +50,33 @@ if response.status==200:
 series_1=pd.Series(np.linspace(1,4,100))
 series_2=pd.Series(np.linspace(1,3,100))
 series_3=pd.Series(np.linspace(10000,30000,100))
+
+# %% [markdown]
+# **Create a dataframe by joining `series_1`, `series_2`, `series_3` by column**
+
+# %%
+data=pd.concat([series_1,series_2,series_3],axis=1)
+
+# %%
+data.head()
+
+# %%
+data.info()
+
+# %% [markdown]
+# **Change the name of columns to `bedrs`, `bathrs`, `price_sqr_meter`**
+
+# %%
+data=data.rename(columns={0:'bedrs',1:'bathrs',2:'price_sqr_meter'})
+data
+
+# %% [markdown]
+# **Create one column dataframe with the values of `series_1`, `series_2`, `series_3` and assign it to `bigcolumn`**
+
+# %%
+data_1=pd.DataFrame(pd.concat([series_1,series_2,series_3]).reset_index(drop=True)).rename(columns={0:'bigcolumn'})
+
+# %%
+data_1
+
+# %%
