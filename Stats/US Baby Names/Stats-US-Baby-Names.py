@@ -19,27 +19,13 @@
 # **Check and install the dependencies**
 
 # %%
-# Check the current Runtime type
-import os
-
-try:
-    if get_ipython().__class__.__module__=='google.colab._shell':
-        runtime='colab'
-        parent_path=os.path.join('/content','drive','MyDrive')
-    elif get_ipython().__class__.__module__=='ipykernel.zmqshell':
-        runtime='jupyter'
-        parent_path=os.getcwd()
-except NameError as ne:
-    print('Running as .py Script and not as .ipynb Notebook')
-    runtime='python-script'
-    parent_path=os.path.join(os.path.expanduser('~'),'GDrive')
+# !curl -sSL "https://raw.githubusercontent.com/K14aNB/pandas-exercises/main/requirements.txt"
 
 # %%
-# !cat "$parent_path/Data Science/Git Repos/pandas-exercises/requirements.txt"
-
-# %%
-# If running as .py script, run this command in terminal first!
-# !pip install -r "$parent_path/Data Science/Git Repos/pandas-exercises/requirements.txt"
+# Run this command in terminal before running this notebook as .py script
+# Installs dependencies from requirements.txt present in the repo
+# %%capture
+# !pip install -r "https://raw.githubusercontent.com/K14aNB/pandas-exercises/main/requirements.txt"
 
 # %% [markdown]
 # **Import the libraries**
@@ -47,13 +33,14 @@ except NameError as ne:
 # %%
 import pandas as pd
 import env_setup
+import os
 
 # %% [markdown]
 # **Environment Setup**
 
 # %%
 # Setup environment(Downloading data and setting output formats specified in config.yaml)
-result_path=env_setup.setup(repo_path='Data Science/Git Repos/pandas-exercises',nb_name='Stats-US-Baby-Names',runtime=runtime,parent_path=parent_path)
+result_path=env_setup.setup(repo_name='pandas-exercises',nb_name='Stats-US-Baby-Names')
 
 # %% [markdown]
 # **Read the data**
