@@ -14591,6 +14591,87 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>Check and install the dependencies</strong></p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-python"><pre><span></span><span class="err">!</span><span class="n">curl</span> <span class="o">-</span><span class="n">sSL</span> <span class="s2">"https://raw.githubusercontent.com/K14aNB/pandas-exercises/main/requirements.txt"</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>download-kaggle-dataset @ git+https://github.com/K14aNB/download-kaggle-dataset.git@main
+env_setup @ git+https://github.com/K14aNB/setup-notebook-environment.git@main
+numpy==1.26.4
+pandas==2.2.2
+matplotlib==3.8.0
+seaborn==0.13.1
+python-dateutil==2.9.0.post0
+pytz==2024.1
+PyYAML==6.0.1
+six==1.16.0
+tzdata==2024.1
+urllib3==2.2.1
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-python"><pre><span></span><span class="c1"># Run this command in terminal before running this notebook as .py script</span>
+<span class="c1"># Installs dependencies from requirements.txt present in the repo</span>
+<span class="o">%%</span><span class="n">capture</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="s2">"https://raw.githubusercontent.com/K14aNB/pandas-exercises/main/requirements.txt"</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>Import the libraries</strong></p>
 
 </div>
@@ -14601,13 +14682,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">env_setup</span>
 <span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">urllib3</span> <span class="kn">import</span> <span class="n">PoolManager</span><span class="p">,</span><span class="n">request</span>
 </pre></div>
 
      </div>
@@ -14632,17 +14712,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-python"><pre><span></span><span class="c1"># Setup Environment</span>
-<span class="c1"># Github gist url for Python Script which will perform environment setup</span>
-<span class="n">env_url</span><span class="o">=</span><span class="s1">'https://gist.githubusercontent.com/K14aNB/46becb626d36ad8fa8d445616241dfef/raw/'</span>
-<span class="n">http</span><span class="o">=</span><span class="n">PoolManager</span><span class="p">()</span>
-<span class="n">response</span><span class="o">=</span><span class="n">http</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s1">'GET'</span><span class="p">,</span><span class="n">env_url</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="o">==</span><span class="mi">200</span><span class="p">:</span>
-    <span class="n">exec</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">))</span>
-    <span class="n">setup</span><span class="p">(</span><span class="n">repo_path</span><span class="o">=</span><span class="s1">'pandas-exercises'</span><span class="p">,</span><span class="n">nb_name</span><span class="o">=</span><span class="s1">'Apply-Alcohol-Consumption'</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="c1"># Setup Environment(Downloading data and setting output formats specified in config.yaml)</span>
+<span class="n">result_path</span><span class="o">=</span><span class="n">env_setup</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">repo_name</span><span class="o">=</span><span class="s1">'pandas-exercises'</span><span class="p">,</span><span class="n">nb_name</span><span class="o">=</span><span class="s1">'Apply-Alcohol-Consumption'</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14667,14 +14741,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-python"><pre><span></span><span class="k">if</span> <span class="s1">'google.colab'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">:</span>
-    <span class="nb">dir</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s1">'Data Science'</span><span class="p">,</span><span class="s1">'Git Repos'</span><span class="p">,</span><span class="s1">'pandas-exercises'</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">dir</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
-<span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">dir</span><span class="p">,</span><span class="s1">'data'</span><span class="p">,</span><span class="s1">'student-mat.csv'</span><span class="p">))</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">result_path</span><span class="p">,</span><span class="s1">'student-mat.csv'</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -14687,7 +14757,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -14708,13 +14778,13 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-  <div id="df-8a035694-bdb5-418d-ac0e-7b427f136fad" class="colab-df-container">
+  <div id="df-e6905383-7365-4ebc-87f2-d49aa1ea965b" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -14884,7 +14954,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-8a035694-bdb5-418d-ac0e-7b427f136fad')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-e6905383-7365-4ebc-87f2-d49aa1ea965b')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -14936,12 +15006,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
     <script>
       const buttonEl =
-        document.querySelector('#df-8a035694-bdb5-418d-ac0e-7b427f136fad button.colab-df-convert');
+        document.querySelector('#df-e6905383-7365-4ebc-87f2-d49aa1ea965b button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-8a035694-bdb5-418d-ac0e-7b427f136fad');
+        const element = document.querySelector('#df-e6905383-7365-4ebc-87f2-d49aa1ea965b');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -14961,8 +15031,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
   </div>
 
 
-<div id="df-37521345-a9f0-48cc-92c9-d5d6b64e9dc4">
-  <button class="colab-df-quickchart" onclick="quickchart('df-37521345-a9f0-48cc-92c9-d5d6b64e9dc4')"
+<div id="df-4e16c9c4-2daf-4cbb-a327-95b52997f971">
+  <button class="colab-df-quickchart" onclick="quickchart('df-4e16c9c4-2daf-4cbb-a327-95b52997f971')"
             title="Suggest charts"
             style="display:none;">
 
@@ -15081,7 +15151,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-37521345-a9f0-48cc-92c9-d5d6b64e9dc4 button');
+        document.querySelector('#df-4e16c9c4-2daf-4cbb-a327-95b52997f971 button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
@@ -15104,7 +15174,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -15194,7 +15264,7 @@ memory usage: 102.0+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">'school'</span><span class="p">:</span><span class="s1">'guardian'</span><span class="p">]</span>
@@ -15216,13 +15286,13 @@ memory usage: 102.0+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-  <div id="df-cab4ff7c-c02a-42bb-95ee-ff73dfa79cd8" class="colab-df-container">
+  <div id="df-8466ebc1-cb31-4ba4-9f6b-f203fdbbd0df" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -15428,7 +15498,7 @@ memory usage: 102.0+ KB
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-cab4ff7c-c02a-42bb-95ee-ff73dfa79cd8')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-8466ebc1-cb31-4ba4-9f6b-f203fdbbd0df')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -15480,12 +15550,12 @@ memory usage: 102.0+ KB
 
     <script>
       const buttonEl =
-        document.querySelector('#df-cab4ff7c-c02a-42bb-95ee-ff73dfa79cd8 button.colab-df-convert');
+        document.querySelector('#df-8466ebc1-cb31-4ba4-9f6b-f203fdbbd0df button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-cab4ff7c-c02a-42bb-95ee-ff73dfa79cd8');
+        const element = document.querySelector('#df-8466ebc1-cb31-4ba4-9f6b-f203fdbbd0df');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -15505,8 +15575,8 @@ memory usage: 102.0+ KB
   </div>
 
 
-<div id="df-3ffb60e0-eb3b-49d1-b6b8-9fd9aaa1e014">
-  <button class="colab-df-quickchart" onclick="quickchart('df-3ffb60e0-eb3b-49d1-b6b8-9fd9aaa1e014')"
+<div id="df-31b67305-7372-46f7-baca-3dc543aa2711">
+  <button class="colab-df-quickchart" onclick="quickchart('df-31b67305-7372-46f7-baca-3dc543aa2711')"
             title="Suggest charts"
             style="display:none;">
 
@@ -15625,14 +15695,14 @@ memory usage: 102.0+ KB
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-3ffb60e0-eb3b-49d1-b6b8-9fd9aaa1e014 button');
+        document.querySelector('#df-31b67305-7372-46f7-baca-3dc543aa2711 button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
   </script>
 </div>
 
-  <div id="id_26428cf0-e011-4f1d-96ff-8118991fc95b">
+  <div id="id_ab39bdce-c034-44bc-b664-0ef010584a90">
     <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -15676,7 +15746,7 @@ memory usage: 102.0+ KB
     <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_26428cf0-e011-4f1d-96ff-8118991fc95b button.colab-df-generate');
+        document.querySelector('#id_ab39bdce-c034-44bc-b664-0ef010584a90 button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -15715,7 +15785,7 @@ memory usage: 102.0+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">string</span><span class="p">:</span> <span class="n">string</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
@@ -15743,7 +15813,7 @@ memory usage: 102.0+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">'Mjob'</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">'Mjob'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -15766,13 +15836,13 @@ memory usage: 102.0+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-  <div id="df-5641d5ee-5ac0-4321-bb3b-78b1c3e4cd34" class="colab-df-container">
+  <div id="df-140a9634-b5f0-424d-ad20-5c5ae89e77e8" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -15978,7 +16048,7 @@ memory usage: 102.0+ KB
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-5641d5ee-5ac0-4321-bb3b-78b1c3e4cd34')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-140a9634-b5f0-424d-ad20-5c5ae89e77e8')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -16030,12 +16100,12 @@ memory usage: 102.0+ KB
 
     <script>
       const buttonEl =
-        document.querySelector('#df-5641d5ee-5ac0-4321-bb3b-78b1c3e4cd34 button.colab-df-convert');
+        document.querySelector('#df-140a9634-b5f0-424d-ad20-5c5ae89e77e8 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-5641d5ee-5ac0-4321-bb3b-78b1c3e4cd34');
+        const element = document.querySelector('#df-140a9634-b5f0-424d-ad20-5c5ae89e77e8');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -16055,8 +16125,8 @@ memory usage: 102.0+ KB
   </div>
 
 
-<div id="df-7bb80590-e373-43b5-bb2f-7d1d9b22478c">
-  <button class="colab-df-quickchart" onclick="quickchart('df-7bb80590-e373-43b5-bb2f-7d1d9b22478c')"
+<div id="df-b2a57ed3-9401-431e-b1c9-e381cd2512c1">
+  <button class="colab-df-quickchart" onclick="quickchart('df-b2a57ed3-9401-431e-b1c9-e381cd2512c1')"
             title="Suggest charts"
             style="display:none;">
 
@@ -16175,14 +16245,14 @@ memory usage: 102.0+ KB
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-7bb80590-e373-43b5-bb2f-7d1d9b22478c button');
+        document.querySelector('#df-b2a57ed3-9401-431e-b1c9-e381cd2512c1 button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
   </script>
 </div>
 
-  <div id="id_d4e80dbb-6b26-46b5-b52c-5aea4c1c0f54">
+  <div id="id_5c71244c-cc18-47b2-8e78-28b63e4a17e6">
     <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -16226,7 +16296,7 @@ memory usage: 102.0+ KB
     <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_d4e80dbb-6b26-46b5-b52c-5aea4c1c0f54 button.colab-df-generate');
+        document.querySelector('#id_5c71244c-cc18-47b2-8e78-28b63e4a17e6 button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -16292,7 +16362,7 @@ memory usage: 102.0+ KB
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-  <div id="df-6bb79f82-666c-4915-901f-1fc761c57280" class="colab-df-container">
+  <div id="df-413c3d86-f706-432d-b741-0e568a6d5268" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -16407,7 +16477,7 @@ memory usage: 102.0+ KB
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-6bb79f82-666c-4915-901f-1fc761c57280')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-413c3d86-f706-432d-b741-0e568a6d5268')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -16459,12 +16529,12 @@ memory usage: 102.0+ KB
 
     <script>
       const buttonEl =
-        document.querySelector('#df-6bb79f82-666c-4915-901f-1fc761c57280 button.colab-df-convert');
+        document.querySelector('#df-413c3d86-f706-432d-b741-0e568a6d5268 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-6bb79f82-666c-4915-901f-1fc761c57280');
+        const element = document.querySelector('#df-413c3d86-f706-432d-b741-0e568a6d5268');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -16484,8 +16554,8 @@ memory usage: 102.0+ KB
   </div>
 
 
-<div id="df-b3626128-47bb-4597-af46-595d0743888e">
-  <button class="colab-df-quickchart" onclick="quickchart('df-b3626128-47bb-4597-af46-595d0743888e')"
+<div id="df-e2b75d28-c5bc-43c7-a1de-e5f6adc831ca">
+  <button class="colab-df-quickchart" onclick="quickchart('df-e2b75d28-c5bc-43c7-a1de-e5f6adc831ca')"
             title="Suggest charts"
             style="display:none;">
 
@@ -16604,7 +16674,7 @@ memory usage: 102.0+ KB
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-b3626128-47bb-4597-af46-595d0743888e button');
+        document.querySelector('#df-e2b75d28-c5bc-43c7-a1de-e5f6adc831ca button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
@@ -16640,7 +16710,7 @@ memory usage: 102.0+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="k">def</span> <span class="nf">majority</span><span class="p">(</span><span class="n">age</span><span class="p">:</span><span class="nb">int</span><span class="p">):</span>
@@ -16663,7 +16733,7 @@ memory usage: 102.0+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">'legal_drinker'</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">'age'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">majority</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
@@ -16685,13 +16755,13 @@ memory usage: 102.0+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-  <div id="df-1f67f57f-84ed-4653-87bb-bd3709c4ee2f" class="colab-df-container">
+  <div id="df-5f32ad7c-9492-4686-9bc4-430248be5a6a" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -16909,7 +16979,7 @@ memory usage: 102.0+ KB
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-1f67f57f-84ed-4653-87bb-bd3709c4ee2f')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-5f32ad7c-9492-4686-9bc4-430248be5a6a')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -16961,12 +17031,12 @@ memory usage: 102.0+ KB
 
     <script>
       const buttonEl =
-        document.querySelector('#df-1f67f57f-84ed-4653-87bb-bd3709c4ee2f button.colab-df-convert');
+        document.querySelector('#df-5f32ad7c-9492-4686-9bc4-430248be5a6a button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-1f67f57f-84ed-4653-87bb-bd3709c4ee2f');
+        const element = document.querySelector('#df-5f32ad7c-9492-4686-9bc4-430248be5a6a');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -16986,8 +17056,8 @@ memory usage: 102.0+ KB
   </div>
 
 
-<div id="df-b8e16a0c-d480-48b0-b187-e9201b1a3010">
-  <button class="colab-df-quickchart" onclick="quickchart('df-b8e16a0c-d480-48b0-b187-e9201b1a3010')"
+<div id="df-e90807de-2d92-4cb1-8044-b0287f120e02">
+  <button class="colab-df-quickchart" onclick="quickchart('df-e90807de-2d92-4cb1-8044-b0287f120e02')"
             title="Suggest charts"
             style="display:none;">
 
@@ -17106,14 +17176,14 @@ memory usage: 102.0+ KB
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-b8e16a0c-d480-48b0-b187-e9201b1a3010 button');
+        document.querySelector('#df-e90807de-2d92-4cb1-8044-b0287f120e02 button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
   </script>
 </div>
 
-  <div id="id_e0c40e0a-a57f-46ac-bc37-3a826d29ead9">
+  <div id="id_99e940ef-424e-448e-823b-a04a9d633eec">
     <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -17157,7 +17227,7 @@ memory usage: 102.0+ KB
     <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_e0c40e0a-a57f-46ac-bc37-3a826d29ead9 button.colab-df-generate');
+        document.querySelector('#id_99e940ef-424e-448e-823b-a04a9d633eec button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -17196,7 +17266,7 @@ memory usage: 102.0+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">numeric</span><span class="o">=</span><span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'int32'</span><span class="p">,</span><span class="s1">'int64'</span><span class="p">,</span><span class="s1">'float32'</span><span class="p">,</span><span class="s1">'float64'</span><span class="p">]]</span>
@@ -17219,13 +17289,13 @@ memory usage: 102.0+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-  <div id="df-5b8f0cbd-aebe-4757-abbc-4c98e6c6fbfe" class="colab-df-container">
+  <div id="df-73801dfb-4f67-4ee8-b768-30e2c4694c1b" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -17443,7 +17513,7 @@ memory usage: 102.0+ KB
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-5b8f0cbd-aebe-4757-abbc-4c98e6c6fbfe')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-73801dfb-4f67-4ee8-b768-30e2c4694c1b')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -17495,12 +17565,12 @@ memory usage: 102.0+ KB
 
     <script>
       const buttonEl =
-        document.querySelector('#df-5b8f0cbd-aebe-4757-abbc-4c98e6c6fbfe button.colab-df-convert');
+        document.querySelector('#df-73801dfb-4f67-4ee8-b768-30e2c4694c1b button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-5b8f0cbd-aebe-4757-abbc-4c98e6c6fbfe');
+        const element = document.querySelector('#df-73801dfb-4f67-4ee8-b768-30e2c4694c1b');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -17520,8 +17590,8 @@ memory usage: 102.0+ KB
   </div>
 
 
-<div id="df-553687a4-53bc-4ec5-9660-aab4a8bc16a1">
-  <button class="colab-df-quickchart" onclick="quickchart('df-553687a4-53bc-4ec5-9660-aab4a8bc16a1')"
+<div id="df-f84cc59b-150d-4fbd-a41e-899e2c5894d9">
+  <button class="colab-df-quickchart" onclick="quickchart('df-f84cc59b-150d-4fbd-a41e-899e2c5894d9')"
             title="Suggest charts"
             style="display:none;">
 
@@ -17640,14 +17710,14 @@ memory usage: 102.0+ KB
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-553687a4-53bc-4ec5-9660-aab4a8bc16a1 button');
+        document.querySelector('#df-f84cc59b-150d-4fbd-a41e-899e2c5894d9 button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
   </script>
 </div>
 
-  <div id="id_7416c4f4-3c0d-4923-9852-c5475cea8760">
+  <div id="id_cece2041-5e87-490e-8c40-6635b34f4bc4">
     <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -17691,7 +17761,7 @@ memory usage: 102.0+ KB
     <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_7416c4f4-3c0d-4923-9852-c5475cea8760 button.colab-df-generate');
+        document.querySelector('#id_cece2041-5e87-490e-8c40-6635b34f4bc4 button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -17718,7 +17788,7 @@ memory usage: 102.0+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span>
