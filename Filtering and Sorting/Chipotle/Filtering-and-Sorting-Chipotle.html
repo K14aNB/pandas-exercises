@@ -14591,6 +14591,87 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>Check and install the dependencies</strong></p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-python"><pre><span></span><span class="err">!</span><span class="n">curl</span> <span class="o">-</span><span class="n">sSL</span> <span class="s1">'https://raw.githubusercontent.com/K14aNB/pandas-exercises/main/requirements.txt'</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>download-kaggle-dataset @ git+https://github.com/K14aNB/download-kaggle-dataset.git@main
+env_setup @ git+https://github.com/K14aNB/setup-notebook-environment.git@main
+numpy==1.26.4
+pandas==2.2.2
+matplotlib==3.8.0
+seaborn==0.13.1
+python-dateutil==2.9.0.post0
+pytz==2024.1
+PyYAML==6.0.1
+six==1.16.0
+tzdata==2024.1
+urllib3==2.2.1
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-python"><pre><span></span><span class="c1"># Run this command in terminal before running this notebook as .py script</span>
+<span class="c1"># Installs dependencies from requirements.txt present in the repo</span>
+<span class="o">%%</span><span class="n">capture</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="s1">'https://raw.githubusercontent.com/K14aNB/pandas-exercises/main/requirements.txt'</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>Import the libraries</strong></p>
 
 </div>
@@ -14601,13 +14682,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">from</span> <span class="nn">urllib3</span> <span class="kn">import</span> <span class="n">PoolManager</span><span class="p">,</span><span class="n">request</span>
+<span class="kn">import</span> <span class="nn">env_setup</span>
 </pre></div>
 
      </div>
@@ -14632,17 +14712,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-python"><pre><span></span><span class="c1"># Setup Environment</span>
-<span class="c1"># Github gist url for Python Script which will perform environment setup</span>
-<span class="n">env_url</span> <span class="o">=</span> <span class="s1">'https://gist.githubusercontent.com/K14aNB/46becb626d36ad8fa8d445616241dfef/raw/'</span>
-<span class="n">http</span> <span class="o">=</span> <span class="n">PoolManager</span><span class="p">()</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s1">'GET'</span><span class="p">,</span><span class="n">env_url</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="o">==</span><span class="mi">200</span><span class="p">:</span>
-    <span class="n">exec</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">))</span>
-    <span class="n">setup</span><span class="p">(</span><span class="n">repo_path</span><span class="o">=</span><span class="s1">'pandas-exercises'</span><span class="p">,</span><span class="n">nb_name</span><span class="o">=</span><span class="s1">'Filtering-and-Sorting-Chipotle'</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="c1"># Setup Environment(Downloading data and setting output formats specified in config.yaml)</span>
+<span class="n">result_path</span><span class="o">=</span><span class="n">env_setup</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">repo_name</span><span class="o">=</span><span class="s1">'pandas-exercises'</span><span class="p">,</span><span class="n">nb_name</span><span class="o">=</span><span class="s1">'Filtering-and-Sorting-Chipotle'</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14667,14 +14741,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-python"><pre><span></span><span class="k">if</span> <span class="s1">'google.colab'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">:</span>
-    <span class="nb">dir</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s1">'Data Science'</span><span class="p">,</span><span class="s1">'Git Repos'</span><span class="p">,</span><span class="s1">'pandas-exercises'</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">dir</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
-<span class="n">chipo</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">dir</span><span class="p">,</span><span class="s1">'data'</span><span class="p">,</span><span class="s1">'chipotle.tsv'</span><span class="p">),</span><span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\t</span><span class="s1">'</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">chipo</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">result_path</span><span class="p">,</span><span class="s1">'chipotle.tsv'</span><span class="p">),</span><span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\t</span><span class="s1">'</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14687,7 +14757,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">chipo</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -14708,13 +14778,13 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-  <div id="df-259367a3-68c7-4112-b74f-707e488a6077" class="colab-df-container">
+  <div id="df-78f813e7-46f6-4017-ad2c-4b1f17764546" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -14787,7 +14857,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-259367a3-68c7-4112-b74f-707e488a6077')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-78f813e7-46f6-4017-ad2c-4b1f17764546')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -14839,12 +14909,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
     <script>
       const buttonEl =
-        document.querySelector('#df-259367a3-68c7-4112-b74f-707e488a6077 button.colab-df-convert');
+        document.querySelector('#df-78f813e7-46f6-4017-ad2c-4b1f17764546 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-259367a3-68c7-4112-b74f-707e488a6077');
+        const element = document.querySelector('#df-78f813e7-46f6-4017-ad2c-4b1f17764546');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -14864,8 +14934,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
   </div>
 
 
-<div id="df-9b10ae42-42cd-4586-878f-80a830b301c7">
-  <button class="colab-df-quickchart" onclick="quickchart('df-9b10ae42-42cd-4586-878f-80a830b301c7')"
+<div id="df-c4d6ca54-fc1d-4b0a-b8a5-f1c19b2b2d8d">
+  <button class="colab-df-quickchart" onclick="quickchart('df-c4d6ca54-fc1d-4b0a-b8a5-f1c19b2b2d8d')"
             title="Suggest charts"
             style="display:none;">
 
@@ -14984,7 +15054,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-9b10ae42-42cd-4586-878f-80a830b301c7 button');
+        document.querySelector('#df-c4d6ca54-fc1d-4b0a-b8a5-f1c19b2b2d8d button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
@@ -15007,7 +15077,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">chipo</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -15069,7 +15139,7 @@ memory usage: 180.7+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Converting item price column to float64</span>
@@ -15087,7 +15157,7 @@ memory usage: 180.7+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Total Number of items that cost more than 10.00</span>
@@ -15109,7 +15179,7 @@ memory usage: 180.7+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 
 
 
@@ -15129,7 +15199,7 @@ memory usage: 180.7+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Number of unique products that cost more than 10.00</span>
@@ -15151,7 +15221,7 @@ memory usage: 180.7+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 
 
 
@@ -15183,7 +15253,7 @@ memory usage: 180.7+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">chipo</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s1">'item_name'</span><span class="p">,</span><span class="s1">'item_price'</span><span class="p">]]</span>
@@ -15204,13 +15274,13 @@ memory usage: 180.7+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-  <div id="df-6bad4f73-7c88-45e5-a2ca-71be8c3a61f0" class="colab-df-container">
+  <div id="df-a3651409-9d29-4366-8d89-7b493314e504" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -15296,7 +15366,7 @@ memory usage: 180.7+ KB
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-6bad4f73-7c88-45e5-a2ca-71be8c3a61f0')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-a3651409-9d29-4366-8d89-7b493314e504')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -15348,12 +15418,12 @@ memory usage: 180.7+ KB
 
     <script>
       const buttonEl =
-        document.querySelector('#df-6bad4f73-7c88-45e5-a2ca-71be8c3a61f0 button.colab-df-convert');
+        document.querySelector('#df-a3651409-9d29-4366-8d89-7b493314e504 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-6bad4f73-7c88-45e5-a2ca-71be8c3a61f0');
+        const element = document.querySelector('#df-a3651409-9d29-4366-8d89-7b493314e504');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -15373,8 +15443,8 @@ memory usage: 180.7+ KB
   </div>
 
 
-<div id="df-22e5076f-7d30-4e1e-9436-f9fc78f96dfb">
-  <button class="colab-df-quickchart" onclick="quickchart('df-22e5076f-7d30-4e1e-9436-f9fc78f96dfb')"
+<div id="df-5660678b-657c-4c7e-b0e9-72b2b410c72a">
+  <button class="colab-df-quickchart" onclick="quickchart('df-5660678b-657c-4c7e-b0e9-72b2b410c72a')"
             title="Suggest charts"
             style="display:none;">
 
@@ -15493,7 +15563,7 @@ memory usage: 180.7+ KB
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-22e5076f-7d30-4e1e-9436-f9fc78f96dfb button');
+        document.querySelector('#df-5660678b-657c-4c7e-b0e9-72b2b410c72a button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
@@ -15528,7 +15598,7 @@ memory usage: 180.7+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">chipo</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">'item_name'</span><span class="p">)</span>
@@ -15549,13 +15619,13 @@ memory usage: 180.7+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-  <div id="df-c97da334-e9df-41f3-81fd-6adf9d8f5511" class="colab-df-container">
+  <div id="df-64acbf15-bc57-4e0a-a48d-b455517a98c1" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -15677,7 +15747,7 @@ memory usage: 180.7+ KB
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-c97da334-e9df-41f3-81fd-6adf9d8f5511')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-64acbf15-bc57-4e0a-a48d-b455517a98c1')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -15729,12 +15799,12 @@ memory usage: 180.7+ KB
 
     <script>
       const buttonEl =
-        document.querySelector('#df-c97da334-e9df-41f3-81fd-6adf9d8f5511 button.colab-df-convert');
+        document.querySelector('#df-64acbf15-bc57-4e0a-a48d-b455517a98c1 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-c97da334-e9df-41f3-81fd-6adf9d8f5511');
+        const element = document.querySelector('#df-64acbf15-bc57-4e0a-a48d-b455517a98c1');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -15754,8 +15824,8 @@ memory usage: 180.7+ KB
   </div>
 
 
-<div id="df-4c684fa7-d8b0-4092-8930-c86a7a4ef82b">
-  <button class="colab-df-quickchart" onclick="quickchart('df-4c684fa7-d8b0-4092-8930-c86a7a4ef82b')"
+<div id="df-96ad45d8-a9c8-451d-96cc-482c86c35bb6">
+  <button class="colab-df-quickchart" onclick="quickchart('df-96ad45d8-a9c8-451d-96cc-482c86c35bb6')"
             title="Suggest charts"
             style="display:none;">
 
@@ -15874,7 +15944,7 @@ memory usage: 180.7+ KB
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-4c684fa7-d8b0-4092-8930-c86a7a4ef82b button');
+        document.querySelector('#df-96ad45d8-a9c8-451d-96cc-482c86c35bb6 button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
@@ -15909,7 +15979,7 @@ memory usage: 180.7+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">chipo</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">chipo</span><span class="p">[</span><span class="s1">'item_price'</span><span class="p">]</span><span class="o">==</span><span class="n">chipo</span><span class="p">[</span><span class="s1">'item_price'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span><span class="s1">'quantity'</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -15930,7 +16000,7 @@ memory usage: 180.7+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
 
@@ -15962,7 +16032,7 @@ memory usage: 180.7+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">chipo</span><span class="p">[</span><span class="s1">'item_name'</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[</span><span class="s1">'Veggie Salad Bowl'</span><span class="p">]</span>
@@ -15983,7 +16053,7 @@ memory usage: 180.7+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 
 
 
@@ -16015,7 +16085,7 @@ memory usage: 180.7+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">chipo</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">chipo</span><span class="p">[</span><span class="s1">'item_name'</span><span class="p">]</span><span class="o">==</span><span class="s1">'Canned Soda'</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">chipo</span><span class="p">[</span><span class="s1">'quantity'</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">),</span><span class="s1">'item_name'</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -16036,7 +16106,7 @@ memory usage: 180.7+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
 
 
 
@@ -16056,7 +16126,7 @@ memory usage: 180.7+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span>
