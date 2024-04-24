@@ -16,26 +16,31 @@
 # # **Merge - Fictitious Names**
 
 # %% [markdown]
+# **Check and install the dependencies**
+
+# %%
+# !curl -sSL "https://raw.githubusercontent.com/K14aNB/pandas-exercises/main/requirements.txt"
+
+# %%
+# Run this command in terminal before running this notebook as .py script
+# Installs dependencies from requirements.txt present in the repo
+# %%capture
+# !pip install -r "https://raw.githubusercontent.com/K14aNB/pandas-exercises/main/requirements.txt"
+
+# %% [markdown]
 # **Import the libraries**
 
 # %%
 import pandas as pd
-import sys
+import env_setup
 import os
-from urllib3 import PoolManager,request
 
 # %% [markdown]
 # **Environment Setup**
 
 # %%
-# Setup Environment
-# Github gist for Python Script which will perform environment setup
-env_url='https://gist.githubusercontent.com/K14aNB/46becb626d36ad8fa8d445616241dfef/raw/'
-http=PoolManager()
-response=http.request('GET',env_url)
-if response.status==200:
-    exec(response.data.decode('utf-8'))
-    setup(repo_path='pandas-exercises',nb_name='Merge-Fictitious-Names')
+# Setup Environment(Downloading data and set output formats specified in config.yaml)
+result_path=env_setup.setup(repo_name='pandas-exercises',nb_name='Merge-Fictitious-Names')
 
 # %% [markdown]
 # **Read the data**
@@ -102,7 +107,21 @@ data3
 # **Merge `all_data` and `data3` along the `subject_id` value**
 
 # %%
-merged=all_data.merge(data3,on='subject_id',how='inner')
-merged
+merged_1=all_data.merge(data3,on='subject_id',how='inner')
+merged_1
+
+# %% [markdown]
+# **Merge only the data that has same `subject_id` value on both `data1` and `data2`**
+
+# %%
+merged_2=data1.merge(data2,on='subject_id',how='inner')
+merged_2
+
+# %% [markdown]
+# **Merge all values in `data1` and `data2`, with matching records from both sides where available**
+
+# %%
+merged_3=data1.merge(data2,on='subject_id',how='outer')
+merged_3
 
 # %%
