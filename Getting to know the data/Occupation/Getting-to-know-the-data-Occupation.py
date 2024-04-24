@@ -16,36 +16,37 @@
 # # **Getting to know the Data - Occupation**
 
 # %% [markdown]
+# **Check and install the dependencies**
+
+# %%
+# !curl -sSL "https://raw.githubusercontent.com/K14aNB/pandas-exercises/main/requirements.txt"
+
+# %%
+# Run this command in terminal before running this notebook as .py script
+# Installs dependencies from requirements.txt present in the repo
+# %%capture
+# !pip install -r "https://raw.githubusercontent.com/K14aNB/pandas-exercises/main/requirements.txt"
+
+# %% [markdown]
 # **Import the libraries**
 
 # %%
 import pandas as pd
 import os
-import sys
-from urllib3 import PoolManager,request
+import env_setup
 
 # %% [markdown]
 # **Environment setup**
 
 # %%
-# Setup Environment
-# Github gist url for Python script which will perform environment setup
-env_url='https://gist.githubusercontent.com/K14aNB/46becb626d36ad8fa8d445616241dfef/raw/'
-http=PoolManager()
-setup_env_response=http.request('GET',env_url)
-if setup_env_response.status==200:
-    exec(setup_env_response.data.decode('utf-8'))
-    setup(repo_path='pandas-exercises',nb_name='Getting-to-know-the-data-Occupation')
+# Setup Environment(Downloading data and setting output formats specified in config.yaml)
+results_path=env_setup.setup(repo_name='pandas-exercises',nb_name='Getting-to-know-the-data-Occupation')
 
 # %% [markdown]
 # **Read the data**
 
 # %%
-if 'google.colab' not in sys.modules:
-    dir=os.path.join(os.getcwd(),'Data Science','Git Repos','pandas-exercises')
-else:
-    dir='/content'
-users=pd.read_csv(os.path.join(dir,'data','u.user'),sep='|',index_col='user_id')
+users=pd.read_csv(os.path.join(results_path,'u.user'),sep='|',index_col='user_id')
 
 # %%
 users.head()
