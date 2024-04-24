@@ -124,6 +124,25 @@ notebooks:
       - nb-html-preview: 'true'
       - py-percent-script: 'true'
       - output-path: 'Stats/US Baby Names'
+    
+  Stats-Wind-Stats:
+    data:
+      - source: 'direct-download'
+      - data-src-path: 'https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/06_Stats/Wind_Stats/wind.data'
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Stats/Wind Stats'
+  
+  Visualization-Chipotle:
+    data:
+      - source: 'direct-download'
+      - data-src-path: 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv'
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Visualization/Chipotle'
+
 
 
     
