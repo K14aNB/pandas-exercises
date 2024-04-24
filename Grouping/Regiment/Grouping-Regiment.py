@@ -16,26 +16,31 @@
 # # **Grouping - Regiment**
 
 # %% [markdown]
+# **Check and install the dependencies**
+
+# %%
+# !curl -sSL "https://raw.githubusercontent.com/K14aNB/pandas-exercises/main/requirements.txt"
+
+# %%
+# Run this command in terminal before running this notebook as .py script
+# Installs dependencies from requirements.txt present in the repo
+# %%capture
+# !pip install -r "https://raw.githubusercontent.com/K14aNB/pandas-exercises/main/requirements.txt"
+
+# %% [markdown]
 # **Import libraries**
 
 # %%
 import pandas as pd
-import sys
+import env_setup
 import os
-from urllib3 import PoolManager,request
 
 # %% [markdown]
 # **Environment Setup**
 
 # %%
-# Setup Environment
-# Github gist url for Python Script which will perform environment setup
-env_url='https://gist.githubusercontent.com/K14aNB/46becb626d36ad8fa8d445616241dfef/raw/'
-http=PoolManager()
-response=http.request('GET',env_url)
-if response.status==200:
-    exec(response.data.decode('utf-8'))
-    setup(repo_path='pandas-exercises',nb_name='Grouping-Regiment')
+# Setup Environment(Downloading data and setting outputs specified in config.yaml)
+results_path=env_setup.setup(repo_name='pandas-exercises',nb_name='Grouping-Regiment')
 
 # %% [markdown]
 # **Read the data**
