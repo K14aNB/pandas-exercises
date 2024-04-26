@@ -143,6 +143,87 @@ notebooks:
       - py-percent-script: 'true'
       - output-path: 'Visualization/Chipotle'
 
+  Visualization-Online-Retail:
+    data:
+      - source: 'direct-download'
+      - data-src-path: 'https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/07_Visualization/Online_Retail/Online_Retail.csv'
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Visualization/Online Retail'
+  
+  Visualization-Scores:
+    data:
+      - source: 'no-download'
+      - data-src-path: ''
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Visualization/Scores'
+  
+  Visualization-Tips:
+    data:
+      - source: 'direct-download'
+      - data-src-path: 'https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/07_Visualization/Tips/tips.csv'
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Visualization/Tips'
+  
+  Visualization-Titanic-Disaster:
+    data:
+      - source: 'direct-download'
+      - data-src-path: 'https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/07_Visualization/Titanic_Desaster/train.csv'
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Visualization/Titanic Disaster' 
+
+  Creating-Series-and-DataFrames-Pokemon:
+    data:
+      - source: 'no-download'
+      - data-src-path: ''
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Creating Series and DataFrames/Pokemon'
+  
+  Time-Series-Apple-Stock:
+    data:
+      - source: 'direct-download'
+      - data-src-path: 'https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/09_Time_Series/Apple_Stock/appl_1980_2014.csv'
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Time Series/Apple Stock'
+    
+  Time-Series-Investor-Flow-of-Funds:
+    data:
+      - source: 'direct-download'
+      - data-src-path: 'https://raw.githubusercontent.com/datasets/investor-flow-of-funds-us/master/data/weekly.csv'
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Time Series/Investor - Flow of Funds' 
+
+  Deleting-Iris:
+    data:
+      - source: 'direct-download'
+      - data-src-path: 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Deleting/Iris'
+
+  Deleting-Wine:
+    data:
+      - source: 'direct-download'
+      - data-src-path: 'https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data'
+    outputs:
+      - nb-html-preview: 'true'
+      - py-percent-script: 'true'
+      - output-path: 'Deleting/Wine'
+    
 
 
     
