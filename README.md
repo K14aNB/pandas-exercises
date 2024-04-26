@@ -27,4 +27,9 @@
      Notebook preview - https://k14anb.github.io/pandas-exercises/Apply/US%20Crime%20Rates/Apply-US-Crime-Rates.html
 ## 5. Stats  
    * ### US Baby Names
-     Notebook preview - https://k14anb.github.io/pandas-exercises/Stats/US%20Baby%20Names/Stats-US-Baby-Names
+     Notebook preview - https://k14anb.github.io/pandas-exercises/Stats/US%20Baby%20Names/Stats-US-Baby-Names.html
+   * ### Wind Stats
+     Notebook preview - https://k14anb.github.io/pandas-exercises/Stats/Wind%20Stats/Stats-Wind-Stats.html
+## 6. Visualization  
+   * ### Chipotle
+     Notebook preview - https://k14anb.github.io/pandas-exercises/Visualization/Chipotle/Visualization-Chipotle.html
